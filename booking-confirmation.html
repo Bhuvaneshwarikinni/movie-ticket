@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking Confirmation</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    #ticket {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    #poster {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    #movieName {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00d8ff;
+    }
+  </style>
+</head>
+<body>
+  <div id="ticket">
+    <h2>🎟️ Booking Confirmation</h2>
+    <img id="poster" src="" alt="Movie Poster">
+    <p id="movieName"></p>
+    <p class="info" id="theater"></p>
+    <p class="info" id="date"></p>
+    <p class="info" id="amount"></p>
+  </div>
+
+  <script>
+    const movieName = localStorage.getItem('selectedMovieName');
+    const moviePoster = localStorage.getItem('selectedMoviePoster');
+    const theater = localStorage.getItem('theater');
+    const date = localStorage.getItem('date');
+    const totalAmount = localStorage.getItem('totalAmount');
+
+    if (movieName && moviePoster) {
+      document.getElementById('movieName').textContent = movieName;
+      document.getElementById('poster').src = moviePoster;
+      document.getElementById('theater').textContent = `Theater: ${theater}`;
+      document.getElementById('date').textContent = `Date: ${date}`;
+      document.getElementById('amount').textContent = `Total Amount: ${totalAmount}`;
+    } else {
+      document.getElementById('movieName').textContent = 'No movie selected.';
+      document.getElementById('poster').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.ad-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url('2580c62b-f3a7-41ef-8eee-561e4465bcb3.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 50px;
+  color: white;
+}
+
+.ad-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.ad-content h1 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+}
+
+.ad-content p {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+}
+
+.ad-content button {
+  background-color: #FF3B6D;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ad-content button:hover {
+  background-color: #e63260;
+}
